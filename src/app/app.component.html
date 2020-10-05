@@ -1,10 +1,13 @@
-<nav class='navbar navbar-expand nabvar-light bg-light'>
-  <a class='navbar-brand'>{{pageTitle}}</a>
-  <ul class='nav nav-pills'>
-    <li><a class='nav-link' [routerLink]="['/welcome']">Home</a></li>
-    <li><a class='nav-link' [routerLink]="['/products']">Product</a></li>
+<nav class="navbar navbar-expand nabvar-light bg-light">
+  <a class="navbar-brand">{{ pageTitle }}</a>
+  <ul class="nav nav-pills">
+    <li><a class="nav-link" [routerLink]="['/welcome']">Home</a></li>
+    <li><a class="nav-link" [routerLink]="['/products']">Product</a></li>
+    <li><a class="nav-link" [routerLink]="['/']">Logout</a></li>
   </ul>
 </nav>
-<div class='container'>
+<div class="container">
   <router-outlet></router-outlet>
+  <p>Your BMI is:</p>
+  <p>{{ calculateBmi() }}</p>
 </div>
