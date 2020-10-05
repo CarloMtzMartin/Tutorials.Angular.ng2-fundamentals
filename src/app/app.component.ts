@@ -14,7 +14,8 @@ export class AppComponent {
 
   weight: number = 75;
   height: number = 1.8;
-  calculateBmi(): number {
-    return this.weight / (this.height * this.height);
+  bmi: number = 0;
+  calculateBmi(): void {
+    this.bmi = this.weight / (this.height * this.height);
   }
 }
